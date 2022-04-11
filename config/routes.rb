@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root to: "main#index"
 
-  get "/about-us-is-a-rlly-long-url-that-keeps-on-geting-longer-and-longer-and-filling-up-space-more-than-it-should", to: "about#index", as: :about
+  get "/about", to: "about#index"
 
   # Defines the root path route ("/")
   # root "articles#index"
