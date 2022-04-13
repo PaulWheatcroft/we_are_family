@@ -16,6 +16,22 @@
             <%= link_to "Sign Up", sign_up_path, class: "nav-link" %>
         </li>
       </ul>
+
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <% if Current.user %>
+        <li class="nav-link"> 
+
+        <%= Current.user.email %>
+        </li>
+        <li class="nav-link">
+        <%= button_to "Logout", logout_path, method: :delete, class: "btn btn-outline-primary btn-sm" %>
+        </li>
+        <% else %>
+        <li class="nav-link">
+        <%= link_to "Sign In", sign_in_path, class: "btn btn-outline-primary btn-sm" %>
+        </li>
+        <% end %>
+      </ul>
     </div>
   </div>
 </nav>
