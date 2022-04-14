@@ -17,6 +17,9 @@
 
 <% end %>
 
-<p>Don't have an account? Sign up here
- <%= link_to "Sign Up", sign_up_path, class: "nav-link" %>
-</p>
+<div class="mb-3">
+<%= link_to "Forgot your password?", password_reset_path, class: "nav-link" %>
+</div>
+<div class="mb-3">
+<%= link_to "Don't have an account? Sign up here", sign_up_path, class: "nav-link" %>
+</div>

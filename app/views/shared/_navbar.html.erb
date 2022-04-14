@@ -21,7 +21,7 @@
         <% if Current.user %>
         <li class="nav-link"> 
 
-        <%= Current.user.email %>
+        <%= link_to Current.user.email, password_path %>
         </li>
         <li class="nav-link">
         <%= button_to "Logout", logout_path, method: :delete, class: "btn btn-outline-primary btn-sm" %>
