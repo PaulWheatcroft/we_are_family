@@ -1,0 +1,24 @@
+<h1>We are family</h1>
+
+<%= form_with model: @person, url: family_path do |form| %>
+
+    <div class="mb-3">
+        <%= form.label :name %>
+        <%= form.text_field :name, class: "form-control", placeholder: "name" %>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :position %>
+        <%= form.text_field :position, class: "form-control", placeholder: "position" %>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :age %>
+        <%= form.number_field :age, class: "form-control", placeholder: "age" %>
+    </div>
+
+    <div class="mb-3">
+        <%= form.submit class: "btn btn-primary" %>
+    </div>
+
+<% end %>

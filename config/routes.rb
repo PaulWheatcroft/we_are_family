@@ -20,7 +20,11 @@ Rails.application.routes.draw do
   patch "password/reset/edit", to: "password_resets#update"
 
   get "data", to: "data#index"
-  post "data", to:"data#user"
+  post "data", to: "data#user"
+
+  get "family", to: "family#index"
+  post "family", to: "family#create"
+  post "family/delete", to: "family#delete"
 
   get "about", to: "about#index"
 
