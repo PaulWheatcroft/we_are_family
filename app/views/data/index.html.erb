@@ -12,14 +12,14 @@
     <div id="<%= thing.id %>" class="card" style="width: 18rem;">
     <div class="card-body">
     <h5 class="card-title"><%= thing.name.upcase %></h5>
-    <h6 class="card-subtitle mb-2 text-muted"><%= thing.position %></h6>
+    <h6 class="card-subtitle mb-2 text-muted"><%= thing.position.capitalize %></h6>
     <p class="card-text">They are <%= thing.age%> years old </p>
     <div class="row">
       <div class="col">
-        <%= button_to "Select", data_path(id: thing.id), method: :post, class: "btn btn-outline-primary btn-sm" %>
+        <%= button_to "Edit", data_path(id: thing.id), method: :post, class: "btn btn-outline-primary btn-sm" %>
       </div>
       <div class="col">
-        <%= link_to "Delete", family_delete_path(id: thing.id), method: :post, class: "nav-link" %>
+        <%= button_to "Delete", family_path(id: thing.id), method: :delete, class: "btn btn-outline-danger btn-sm" %>
       </div>
     </div>
      
