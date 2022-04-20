@@ -9,12 +9,14 @@
         <li class="nav-item">
           <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
+        <% if Current.user %>
         <li>
             <%= link_to "Data", data_path, class: "nav-link" %>
         </li>
           <li class="nav-item">
             <%= link_to "Add", family_path, class: "nav-link" %>
         </li>
+        <% end %>
         <% if !Current.user %>
         <li class="nav-item">
             <%= link_to "Sign Up", sign_up_path, class: "nav-link" %>
