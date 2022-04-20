@@ -1,0 +1,25 @@
+<h1>Let's edit someone</h1>
+
+<%= form_with model: @person, url: family_edit_path do |form| %>
+
+    <div class="mb-3">
+        <%= form.label :name %>
+        <%= form.text_field :name, class: "form-control", placeholder: "Name", value: "#{@family_member.name.capitalize}" %>
+        <%= form.text_field :id, class: "form-control", placeholder: "ID", value: "#{@family_member.id}" %>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :position %>
+        <%= form.text_field :position, class: "form-control", placeholder: "Position", value: "#{@family_member.position}" %>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :age %>
+        <%= form.number_field :age, class: "form-control", placeholder: "Age", value: "#{@family_member.age}" %>
+    </div>
+
+    <div class="mb-3">
+        <%= form.submit class: "btn btn-primary" %>
+    </div>
+
+<% end %>

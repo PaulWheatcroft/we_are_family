@@ -16,7 +16,7 @@
     <p class="card-text">They are <%= thing.age%> years old </p>
     <div class="row">
       <div class="col">
-        <%= button_to "Edit", data_path(id: thing.id), method: :post, class: "btn btn-outline-primary btn-sm" %>
+        <%= link_to "Edit", family_edit_path(id: thing.id), method: :edit, class: "btn btn-outline-primary btn-sm" %>
       </div>
       <div class="col">
         <%= button_to "Delete", family_path(id: thing.id), method: :delete, class: "btn btn-outline-danger btn-sm" %>

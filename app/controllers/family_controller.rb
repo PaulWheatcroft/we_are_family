@@ -16,6 +16,18 @@ class FamilyController < ApplicationController
         id = params[:id]
         @family_member = Person.find_by(id: id)
         @family_member.delete
-        render :index
+        redirect_to data_path
+    end
+
+    def edit
+        @id = params[:id]
+        @family_member = Person.find_by(id: @id)
+    end
+
+    def update
+        @id = params[:id]
+        @family_member = Person.find_by(id: @id)
+        @family_member.update(params.permit(:name.downcase, :position.downcase, :age))
+        redirect_to data_path
     end
 end

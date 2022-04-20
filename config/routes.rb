@@ -25,6 +25,8 @@ Rails.application.routes.draw do
   get "family", to: "family#index"
   post "family", to: "family#create"
   delete "family", to: "family#remove"
+  get "family/edit", to: "family#edit"
+  post "family/edit", to: "family#update"
 
   get "about", to: "about#index"
 
