@@ -5,7 +5,7 @@
     <div class="mb-3">
         <%= form.label :name %>
         <%= form.text_field :name, class: "form-control", placeholder: "Name", value: "#{@family_member.name.capitalize}" %>
-        <%= form.text_field :id, class: "form-control", placeholder: "ID", value: "#{@family_member.id}" %>
+        <%= form.hidden_field :id, class: "form-control", placeholder: "ID", value: "#{@family_member.id}" %>
     </div>
 
     <div class="mb-3">
